@@ -3,6 +3,9 @@
 
 Dispatch hooks of a hookable method to methods named automatically.
 
+## Badges  
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  
+
 ## Usage
 
 ```js
@@ -34,4 +37,4 @@ let records = m.find('all', options) // will invoke findAll(options)
 
 // when no hook method exists for a hook, the defaultFind is executed.
 let r = m.find("first", options)
-```
+``` 
