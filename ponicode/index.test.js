@@ -42,3 +42,17 @@ describe("index.Dispatcher.buildMethodName", () => {
         expect(result).toBe("find.all.applications")
     })
 })
+
+// @ponicode
+describe("index.Dispatcher.buildDefaultMethodName", () => {
+    let inst
+
+    beforeEach(() => {
+        inst = new index.Dispatcher()
+    })
+
+    test("0", () => {
+        let result = inst.buildDefaultMethodName("find")
+        expect(result).toBe("defaultFind")
+    })
+})

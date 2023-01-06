@@ -102,16 +102,18 @@ class Dispatcher {
     }
 
     /**
-     * Builds the default method name for the given hook.
-     * @param {string} hook - the hook to build the method name for.
-     * @returns {string} the default method name for the given hook.
+     * Builds a method name for the given hook.
+     * @param {string} hook - the hook to build a method name for.
+     * @param {object} [options={}] - the options for the method name.
+     * @param {string} [options.defaultPrefix] - the default prefix to use for the method name.
+     * @returns {string} the method name for the given hook.
      */
-    buildDefaultMethodName(hook) {
+    buildDefaultMethodName(base, options = {}) {
         options = {
             ...this.options,
             ...{defaultPrefix: 'default'}
         }
-        return this.buildMethodName(options.defaultPrefix, hook)
+        return this.buildMethodName(options.defaultPrefix, base)
     }
 
     /**
